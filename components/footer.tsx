@@ -14,7 +14,7 @@ export default function Footer() {
           </div>
 
           <div className="flex space-x-6">
-            <Link href="#" className="text-white/60 hover:text-white transition-colors">
+            <Link href="https://github.com/yousriB" className="text-white/60 hover:text-white transition-colors">
               <Github className="h-5 w-5" />
               <span className="sr-only">GitHub</span>
             </Link>
@@ -22,11 +22,11 @@ export default function Footer() {
               <Twitter className="h-5 w-5" />
               <span className="sr-only">Twitter</span>
             </Link>
-            <Link href="#" className="text-white/60 hover:text-white transition-colors">
+            <Link href="https://www.linkedin.com/in/benali-yousri-601352260/" className="text-white/60 hover:text-white transition-colors">
               <Linkedin className="h-5 w-5" />
               <span className="sr-only">LinkedIn</span>
             </Link>
-            <Link href="#" className="text-white/60 hover:text-white transition-colors">
+            <Link href="mailto:benaliyousri00@gmail.com" className="text-white/60 hover:text-white transition-colors">
               <Mail className="h-5 w-5" />
               <span className="sr-only">Email</span>
             </Link>

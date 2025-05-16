@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
-import { Quote } from "lucide-react"
-import Image from "next/image"
-import { useEffect } from "react"
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Quote } from "lucide-react";
+import Image from "next/image";
+import { useEffect } from "react";
 
 const testimonials = [
   {
@@ -42,19 +42,21 @@ const testimonials = [
     title: "Creative Director, DesignHub",
     avatar: "/placeholder.svg?height=100&width=100",
   },
-]
+];
 
 export default function TestimonialsSection() {
   useEffect(() => {
     // Check if user prefers reduced motion
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
     if (prefersReducedMotion) {
       // Animation is handled inline with initial x: 0
     }
-  }, [])
+  }, []);
 
   // Clone testimonials for infinite scroll effect
-  const allTestimonials = [...testimonials, ...testimonials]
+  const allTestimonials = [...testimonials, ...testimonials];
 
   return (
     <section className="py-20 bg-gradient-to-b from-[#050505] to-[#030303] overflow-hidden">
@@ -70,7 +72,8 @@ export default function TestimonialsSection() {
             Kind Words from Satisfied Clients
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
-            Don't just take my word for it. Here's what my clients have to say about working with me.
+            Don't just take my word for it. Here's what my clients have to say
+            about working with me.
           </p>
         </motion.div>
 
@@ -82,8 +85,8 @@ export default function TestimonialsSection() {
           {/* Infinite scroll container */}
           <motion.div
             className="flex w-[calc(350px*${allTestimonials.length})] py-4"
-            initial={{ x: "0%" }}
-            animate={{ x: "-50%" }}
+            initial={{ x: "-50%" }}
+            animate={{ x: "0%" }}
             transition={{
               repeat: Number.POSITIVE_INFINITY,
               ease: "linear",
@@ -95,7 +98,9 @@ export default function TestimonialsSection() {
                 <Card className="bg-white/[0.03] border-white/[0.08] h-full">
                   <CardContent className="p-6">
                     <Quote className="h-8 w-8 text-indigo-400 mb-4 opacity-50" />
-                    <p className="text-white/80 mb-6 italic">{testimonial.quote}</p>
+                    <p className="text-white/80 mb-6 italic">
+                      {testimonial.quote}
+                    </p>
                     <div className="flex items-center">
                       <div className="relative h-12 w-12 rounded-full overflow-hidden mr-4">
                         <Image
@@ -106,8 +111,12 @@ export default function TestimonialsSection() {
                         />
                       </div>
                       <div>
-                        <h4 className="text-white font-medium">{testimonial.name}</h4>
-                        <p className="text-white/60 text-sm">{testimonial.title}</p>
+                        <h4 className="text-white font-medium">
+                          {testimonial.name}
+                        </h4>
+                        <p className="text-white/60 text-sm">
+                          {testimonial.title}
+                        </p>
                       </div>
                     </div>
                   </CardContent>
@@ -118,5 +127,5 @@ export default function TestimonialsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

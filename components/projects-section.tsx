@@ -9,53 +9,39 @@ import { useEffect } from "react"
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-featured online store with payment processing and inventory management.",
-    image: "/placeholder.svg?height=600&width=800",
-    tags: ["Next.js", "Tailwind CSS", "Stripe", "Supabase"],
-    liveUrl: "#",
-    githubUrl: "#",
+    title: "مركز عليسة للتميز المهني",
+    description: "كون الي تحب تكونو، احنا معاك. نحول الطموح إلى نجاح من خلال موقع مركز عليسة للتكوين المهني ",
+    image: "/projects/ellisa.png",
+    tags: ["Next.js", "Tailwind CSS", "Formation", "Responsive Design"],
+    liveUrl: "https://ellisa-three.vercel.app/",
+    githubUrl: "https://github.com/yousriB/Ellisa"
   },
   {
-    title: "Portfolio Website",
-    description: "A stunning portfolio website for a professional photographer showcasing their work.",
-    image: "/placeholder.svg?height=600&width=800",
-    tags: ["React", "Three.js", "GSAP", "Framer Motion"],
-    liveUrl: "#",
-    githubUrl: "#",
+    title: "ForumAuto Gabès",
+    description: "A modern and responsive car showroom website for ForumAuto Gabès, allowing users to explore a wide range of vehicles with detailed specifications and a sleek, user-friendly design.",
+    image: "/projects/forum.png",
+    tags: ["Next.js", "Tailwind CSS", "Responsive Design", "Car Showcase"],
+    liveUrl: "https://autogabes.vercel.app/",
+    githubUrl: "https://github.com/yousriB/autogabes"
   },
   {
-    title: "Task Management App",
-    description: "A productivity app that helps teams organize and track their projects efficiently.",
-    image: "/placeholder.svg?height=600&width=800",
-    tags: ["TypeScript", "Redux", "Firebase", "Material UI"],
-    liveUrl: "#",
-    githubUrl: "#",
+    title: "Bus Management System",
+    description: "A web platform designed to manage bus transportation operations efficiently. It includes features for route tracking, schedule management, and detailed bus and driver information, all within a clean and responsive interface.",
+    image: "/projects/bus.png",
+    tags: ["Next.js", "Tailwind CSS", "Responsive Design", "Transportation"],
+    liveUrl: "https://busses-pi.vercel.app/",
+    githubUrl: "https://github.com/yousriB/busses"
   },
   {
-    title: "AI Content Generator",
-    description: "An AI-powered application that generates high-quality content for marketing teams.",
-    image: "/placeholder.svg?height=600&width=800",
-    tags: ["Python", "TensorFlow", "React", "FastAPI"],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    title: "Real Estate Platform",
-    description: "A comprehensive platform for property listings with virtual tours and analytics.",
-    image: "/placeholder.svg?height=600&width=800",
-    tags: ["Vue.js", "Node.js", "MongoDB", "Three.js"],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    title: "Health & Fitness App",
-    description: "A mobile-first application for tracking workouts, nutrition, and health metrics.",
-    image: "/placeholder.svg?height=600&width=800",
-    tags: ["React Native", "GraphQL", "AWS", "D3.js"],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
+    title: "Gaming Project",
+    description: "An interactive gaming platform showcasing dynamic animations and smooth user experience, built with Next.js, Framer Motion, and Tailwind CSS.",
+    image: "/projects/gaming.png",
+    tags: ["Next.js", "Framer Motion", "Tailwind CSS", "Animation", "Responsive Design"],
+    liveUrl: "https://gaming-two-teal.vercel.app/",
+    githubUrl: "https://github.com/yousriB/gaming"
+  }
+  
+
 ]
 
 export default function ProjectsSection() {
@@ -105,11 +91,11 @@ export default function ProjectsSection() {
             }}
           >
             {allProjects.map((project, index) => (
-              <div key={index} className="flex-shrink-0 w-[300px] md:w-[400px] px-4">
+              <div key={index} className="flex-shrink-0 w-[300px] md:w-[450px] px-4">
                 <Card className="bg-white/[0.03] border-white/[0.08] backdrop-blur-sm overflow-hidden h-full transition-all duration-300 hover:shadow-lg hover:shadow-indigo-900/20">
                   <div className="relative h-48 md:h-56 overflow-hidden">
                     <Image
-                      src={project.image || "/placeholder.svg"}
+                      src={project.image}
                       alt={project.title}
                       fill
                       sizes="(max-width: 768px) 300px, 340px"
